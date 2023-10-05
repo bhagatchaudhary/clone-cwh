@@ -167,7 +167,7 @@ span {
     width: 33%;
     padding: 1.5rem 0;
     margin: 0.5rem 1rem;
-    background-color: #1E293B;
+    background-color: #374151;
     border: 2px solid #302c2c;
     border-radius: 20px;
 }
@@ -208,7 +208,7 @@ span {
 
 .test-cont {
     padding: 2rem;
-    background-color: #1E293B;
+    background-color: #374151;
     border-radius: 0.25rem;
 }
 
@@ -269,7 +269,7 @@ footer {
 }
 .f-logo-p{
     color: #9CA3AF;
-    font-size: 0.750rem;
+    font-size: 0.850rem;
     margin-left: 1rem;
     padding: 0.5rem 0 0.5rem 1rem;
     border-left: 2px solid #fff;
@@ -300,6 +300,9 @@ a:hover {
 a>svg {
     height: 1.25rem;
     width: 1.25rem;
+}
+.f-social>a:hover{
+    border-bottom: none;
 }
 
 .text-h5 {
