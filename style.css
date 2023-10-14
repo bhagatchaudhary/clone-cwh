@@ -17,8 +17,9 @@ body {
 
 /* Style for header top */
 #header {
+    position: sticky;
     background-color: #1F2937;
-    box-shadow: 0 4px 6px -1px rgb(230, 133, 133);
+    box-shadow: 0 4px 6px -1px rgb(0, 0, 0, .3);
 }
 
 #header-top {
@@ -71,13 +72,6 @@ span {
     text-align: center;
 }
 
-
-#hr {
-    height: 1px;
-    width: 100%;
-    background-color: rgb(177, 46, 46);
-}
-
 /* Style for header bottom */
 #header-bottom {
     max-height: 9vh;
@@ -100,13 +94,52 @@ span {
     font-size: 1.5rem;
 }
 
+/* Media element CSS */
+.respo {
+    display: flex;
+    display: none;
+    align-items: center;
+}
+
+.respo>.center {
+    font-size: 1.2rem;
+}
+
+.respo-svg {
+    width: 1rem;
+    display: none;
+    cursor: pointer;
+    color: #fff;
+    margin-top: 0.25rem;
+    margin-left: 0.5rem;
+}
+
+.respo-btn {
+    display: none;
+    /* display: inline-flex; */
+    /* position: absolute; */
+    color: #fff;
+    align-items: center;
+    background-color: #6B21A8;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    margin: 0 0.25rem 0 0.25rem;
+    right: 0.75rem;
+
+}
+
+.respo-bnt:hover {
+    background-color: #553c9a;
+}
+
 #hero {
     height: 24em;
     width: 100%;
     margin: auto;
     position: relative;
     display: flex;
-    background-color: #111827;
 }
 
 .bio-cont {
@@ -153,7 +186,6 @@ span {
     min-height: 70vh;
     margin: auto;
     color: #fff;
-    background-color: #111827;
 }
 
 #courses {
@@ -170,6 +202,7 @@ span {
     background-color: #374151;
     border: 2px solid #302c2c;
     border-radius: 20px;
+    box-shadow: 0 4px 6px -1px rgb(0, 0, 0, .3);
 }
 
 #courses .box img {
@@ -194,6 +227,11 @@ span {
 
 .container {
     padding: 3rem 1.25rem 3rem 1.25rem;
+}
+
+#testo {
+    min-height: auto;
+    width: 100%;
 }
 
 .test-main {
@@ -256,18 +294,21 @@ footer {
     flex-wrap: wrap; */
     padding: 1rem 1.25rem;
 }
-.f-logo{
+
+.f-logo {
     display: flex;
     align-items: center;
     font-weight: 600;
     font-size: 1.25rem;
 }
-.f-logo-text{
+
+.f-logo-text {
     margin-left: 0.57rem;
     font-weight: 600;
     font-size: 1.25rem;
 }
-.f-logo-p{
+
+.f-logo-p {
     color: #9CA3AF;
     font-size: 0.850rem;
     margin-left: 1rem;
@@ -301,7 +342,8 @@ a>svg {
     height: 1.25rem;
     width: 1.25rem;
 }
-.f-social>a:hover{
+
+.f-social>a:hover {
     border-bottom: none;
 }
 
@@ -328,6 +370,7 @@ a>svg {
     font-weight: 999;
     text-align: center;
     margin: 2rem auto;
+    color: #6608b4;
 }
 
 .btn {
@@ -365,4 +408,116 @@ a>svg {
 .n-btn:hover {
     background-color: #6B21A8;
 
+}
+
+@media (max-width:900px) {
+    #nav-right {
+        display: none;
+    }
+
+
+    .img-cont {
+        display: none;
+    }
+
+    .bio-cont {
+        width: 100%;
+    }
+
+    .res-center {
+        text-align: center;
+    }
+
+    #btons {
+        display: flex;
+        justify-content: center;
+    }
+
+    #course-cont {
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto 4rem;
+    }
+
+    #courses {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    #courses .box {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    #courses .box img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+
+    }
+
+    .test-main {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .test-left {
+        width: 100%;
+        padding: 1rem;
+        margin: auto;
+    }
+}
+
+@media (max-width:700px) {
+    #header-top {
+        display: flex;
+        align-items: center;
+
+    }
+
+    .res-n-btn {
+        display: block;
+    }
+
+    .respo {
+        display: block;
+        display: flex;
+        align-items: center;
+    }
+
+    .respo-svg {
+        display: block;
+    }
+    .respo-btn {
+        display: block;
+        display: inline-flex;
+        right: 3rem;
+    }
+
+    .nav-list {
+        display: none;
+    }
+     
+}
+
+@media (max-width: 640px) {
+    .f-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 1.25rem;
+    }
+    .f-logo-p{
+        border-left: none;
+    }
+    .f-social {
+        margin-left: 0;
+    }
 }
