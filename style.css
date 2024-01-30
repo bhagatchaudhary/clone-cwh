@@ -116,8 +116,6 @@ span {
 
 .respo-btn {
     display: none;
-    /* display: inline-flex; */
-    /* position: absolute; */
     color: #fff;
     align-items: center;
     background-color: #6B21A8;
@@ -329,14 +327,33 @@ footer {
 a {
     text-decoration: none;
     color: rgb(255 255 255);
+    position: relative;
 }
 
+a:link,
+a:visited {
+    font-weight: 500;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+a:active,
 a:hover {
-    border-bottom: 3px solid #6B21A8;
-    /* transform: translateY(-25px);
-    transition: 0.2s ease-in-out */
+    transform: translateY(-2px);
 }
-
+a::before{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 2px;
+    width: 0;
+    border-bottom: 2px solid #6B21A8;
+    transition: all .3s linear;
+}
+a:hover:before{
+    width: 100%;
+}
 
 a>svg {
     height: 1.25rem;
@@ -494,6 +511,7 @@ a>svg {
     .respo-svg {
         display: block;
     }
+
     .respo-btn {
         display: block;
         display: inline-flex;
@@ -503,7 +521,7 @@ a>svg {
     .nav-list {
         display: none;
     }
-     
+
 }
 
 @media (max-width: 640px) {
@@ -514,9 +532,11 @@ a>svg {
         justify-content: center;
         padding: 1rem 1.25rem;
     }
-    .f-logo-p{
+
+    .f-logo-p {
         border-left: none;
     }
+
     .f-social {
         margin-left: 0;
     }
